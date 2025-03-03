@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program - UNI Strasbourg LLM Workshop 2025</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">NLP/LLM 2025</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="program.html" class="active">Program</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <h1>Workshop Program</h1>
+            <h2>University of Strasbourg - Spring 2025</h2>
+            <p class="instructor">by Roman Jurowetzki</p>
+        </div>
+
+        <section class="content">
+            <h3>Workshop Materials</h3>
+            <p>This workshop consists of several hands-on sessions where participants will learn to leverage Large Language Models for various analytical tasks. All materials are available as Jupyter notebooks that can be accessed directly or opened in Google Colab.</p>
+            
+            <div class="program-sessions">
+                <div class="session">
+                    <h4>Session 1: Introduction to LLM Use</h4>
+                    <p>Learn the fundamentals of working with Large Language Models, including API setup, prompt engineering, and basic applications.</p>
+                    <div class="notebook-links">
+                        <a href="src/01_LLM_use.ipynb" class="button">View Notebook</a>
+                        <a href="https://colab.research.google.com/github/YOUR-GITHUB-USERNAME/unistra-nlp2025/blob/main/src/01_LLM_use.ipynb" class="button" target="_blank">Open in Colab</a>
+                    </div>
+                </div>
+                
+                <div class="session">
+                    <h4>Session 2: Structured Output Generation</h4>
+                    <p>Explore techniques for generating structured data from LLMs, including JSON schema definition, validation, and extraction patterns.</p>
+                    <div class="notebook-links">
+                        <p><em>Coming soon</em></p>
+                    </div>
+                </div>
+                
+                <div class="session">
+                    <h4>Session 3: Topic Modeling with BERTopic</h4>
+                    <p>Learn how to use BERTopic for advanced topic modeling on text data, combining the power of transformers with traditional clustering techniques.</p>
+                    <div class="notebook-links">
+                        <p><em>Coming soon</em></p>
+                    </div>
+                </div>
+                
+                <div class="session">
+                    <h4>Session 4: RAG Applications</h4>
+                    <p>Implement Retrieval-Augmented Generation (RAG) systems to enhance LLM outputs with external knowledge sources.</p>
+                    <div class="notebook-links">
+                        <p><em>Coming soon</em></p>
+                    </div>
+                </div>
+                
+                <div class="session">
+                    <h4>Session 5: Analytical Use Cases</h4>
+                    <p>Apply LLMs to real-world analytical scenarios, including batch processing, data extraction, and insights generation.</p>
+                    <div class="notebook-links">
+                        <p><em>Coming soon</em></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="prerequisites">
+                <h3>Prerequisites</h3>
+                <p>Participants should have basic knowledge of Python and some experience with Jupyter notebooks. Familiarity with machine learning concepts is helpful but not required.</p>
+                <p>You will need:</p>
+                <ul>
+                    <li>A Google account for accessing Google Colab</li>
+                    <li>API keys for LLM services (instructions will be provided)</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 University of Strasbourg</p>
+    </footer>
+
+    <style>
+        /* Additional styles for program page */
+        .program-sessions {
+            margin-top: 2rem;
+        }
+        
+        .session {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .session:last-child {
+            border-bottom: none;
+        }
+        
+        .session h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .notebook-links {
+            margin-top: 1rem;
+        }
+        
+        .notebook-links .button {
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+        }
+        
+        .prerequisites {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .prerequisites ul {
+            list-style-type: none;
+            padding-left: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .prerequisites li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .prerequisites li:before {
+            content: '•';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+    </style>
+</body>
+</html>
