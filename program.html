@@ -23,13 +23,19 @@
     </nav>
 
     <main>
-        <div class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); color: white; padding: 4rem 2rem;">
+        <div class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); color: white; padding: 4rem 2rem;">
             <h1>Workshop Program</h1>
             <h2>University of Strasbourg - Spring 2025</h2>
             <p class="instructor">by Roman Jurowetzki</p>
         </div>
 
         <section class="content">
+            <div class="git-instructions">
+                <h3>Local Development Setup</h3>
+                <p>To work with the workshop materials locally, clone the repository:</p>
+                <pre><code>git clone https://github.com/RJuro/unistra-nlp2025.git</code></pre>
+            </div>
+
             <h3>Workshop Materials</h3>
             <p>This workshop consists of several hands-on sessions where participants will learn to leverage Large Language Models for various analytical tasks. All materials are available as Jupyter notebooks that can be accessed directly or opened in Google Colab.</p>
             
@@ -40,7 +46,10 @@
             </div>
 
             <div class="program-sessions">
-                <div class="session" style="padding: 2rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--border-color);">
+                <div class="day-section">
+                    <h3 class="day-header">Day 1 - March 4, 2025</h3>
+                    <div class="day-content">
+                        <div class="session" style="padding: 2rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--border-color);">
                     <h4>Session 1: Introduction to LLM Use</h4>
                     <p>Learn the fundamentals of working with Large Language Models, including API setup, prompt engineering, and basic applications.</p>
                     <div class="notebook-links">
@@ -49,35 +58,59 @@
                     </div>
                 </div>
                 
-                <div class="session" style="padding: 2rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--border-color);">
-                    <h4>Session 2: Structured Output Generation</h4>
-                    <p>Explore techniques for generating structured data from LLMs, including JSON schema definition, validation, and extraction patterns.</p>
-                    <div class="notebook-links">
-                        <p><em>Coming soon</em></p>
+                        <div class="session" style="padding: 2rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--border-color);">
+                            <h4>Session 2: Batch Processing with Kluster</h4>
+                            <p>Learn how to scale up text extraction by processing large batches of articles efficiently using the Kluster platform. This tutorial covers setting up batch processing jobs and handling multiple API requests simultaneously.</p>
+                            <div class="notebook-links">
+                                <a href="src/02_kluster_batch_submit.ipynb" class="button">View Notebook</a>
+                                <a href="https://colab.research.google.com/github/rjuro/unistra-nlp2025/blob/main/src/02_kluster_batch_submit.ipynb" class="button button-secondary" target="_blank">Open in Colab</a>
+                                <a href="https://rjuro.com/unistra-nlp2025/data/paraphrased_articles.jsonl" class="button button-download" download>Download Data</a>
+                            </div>
+                        </div>
+                        <div class="session" style="padding: 2rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--border-color);">
+                            <h4>Session 3: Results Analysis and Evaluation</h4>
+                            <p>Master the techniques for processing and evaluating results from batch processing jobs. Learn to handle JSONL outputs, parse complex responses, and organize data into structured formats for analysis.</p>
+                            <div class="notebook-links">
+                                <a href="src/03_kluster_batch_eval.ipynb" class="button">View Notebook</a>
+                                <a href="https://colab.research.google.com/github/rjuro/unistra-nlp2025/blob/main/src/03_kluster_batch_eval.ipynb" class="button button-secondary" target="_blank">Open in Colab</a>
+                                <a href="https://rjuro.com/unistra-nlp2025/data/paraphrased_articles.jsonl" class="button button-download" download>Download Data</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <div class="day-section">
+                    <h3 class="day-header">Day 2 - March 5, 2025</h3>
+                    <div class="day-content">
                 
-                <div class="session" style="padding: 2rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--border-color);">
-                    <h4>Session 3: Topic Modeling with BERTopic</h4>
-                    <p>Learn how to use BERTopic for advanced topic modeling on text data, combining the power of transformers with traditional clustering techniques.</p>
-                    <div class="notebook-links">
-                        <p><em>Coming soon</em></p>
+                        <div class="session" style="padding: 2rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--border-color);">
+                            <h4>Session 4: Topic Modeling with BERTopic</h4>
+                            <p>Learn how to use BERTopic for advanced topic modeling on text data, combining the power of transformers with traditional clustering techniques.</p>
+                            <div class="notebook-links">
+                                <p><em>Coming soon</em></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="session" style="padding: 2rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--border-color);">
-                    <h4>Session 4: RAG Applications</h4>
-                    <p>Implement Retrieval-Augmented Generation (RAG) systems to enhance LLM outputs with external knowledge sources.</p>
-                    <div class="notebook-links">
-                        <p><em>Coming soon</em></p>
-                    </div>
-                </div>
-                
-                <div class="session" style="padding: 2rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--border-color);">
-                    <h4>Session 5: Analytical Use Cases</h4>
-                    <p>Apply LLMs to real-world analytical scenarios, including batch processing, data extraction, and insights generation.</p>
-                    <div class="notebook-links">
-                        <p><em>Coming soon</em></p>
+
+                <div class="day-section">
+                    <h3 class="day-header">Day 3 - March 6, 2025</h3>
+                    <div class="day-content">
+                        <div class="session" style="padding: 2rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--border-color);">
+                            <h4>Session 5: RAG Applications</h4>
+                            <p>Implement Retrieval-Augmented Generation (RAG) systems to enhance LLM outputs with external knowledge sources.</p>
+                            <div class="notebook-links">
+                                <p><em>Coming soon</em></p>
+                            </div>
+                        </div>
+                        
+                        <div class="session" style="padding: 2rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--border-color);">
+                            <h4>Session 6: Analytical Use Cases</h4>
+                            <p>Apply LLMs to real-world analytical scenarios, including batch processing, data extraction, and insights generation.</p>
+                            <div class="notebook-links">
+                                <p><em>Coming soon</em></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -96,6 +129,7 @@
     </main>
 
     <script>
+        // Theme toggle functionality
         const themeToggle = document.getElementById('theme-toggle');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const savedTheme = localStorage.getItem('theme');
@@ -109,11 +143,83 @@
             const isDark = document.documentElement.classList.contains('dark');
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
+
+        // Day section sliding functionality
+        document.querySelectorAll('.day-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const section = header.parentElement;
+                section.classList.toggle('collapsed');
+            });
+        });
+
+        // Initialize all sections as expanded
+        document.querySelectorAll('.day-section').forEach(section => {
+            section.classList.remove('collapsed');
+        });
     </script>
 
     <style>
         .intro-slides {
             margin-bottom: 3rem;
+        }
+
+        .day-section {
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .day-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--secondary);
+            color: var(--secondary-foreground);
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            cursor: pointer;
+            margin-bottom: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .arrow-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .collapsed .arrow-icon {
+            transform: rotate(-90deg);
+        }
+
+        .day-section.collapsed .day-content {
+            max-height: 0;
+            opacity: 0;
+        }
+
+        .day-content {
+            opacity: 1;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+        }
+
+        .day-header:hover {
+            background-color: var(--muted);
+        }
+
+        .day-content {
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            max-height: 2000px;
+        }
+
+        .day-section.collapsed .day-content {
+            max-height: 0;
+        }
+
+        .button-download {
+            background-color: var(--accent);
+            color: var(--accent-foreground);
+        }
+
+        .button-download:hover {
+            background-color: var(--muted);
         }
         
         .slides-container {
