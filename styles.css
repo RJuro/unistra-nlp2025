@@ -419,6 +419,61 @@ div[style*="padding: 2rem; border-radius: 8px; margin-bottom: 2rem; border: 1px 
   background-color: var(--secondary);
 }
 
+/* Add these styles for the copy button functionality */
+.code-container {
+  position: relative;
+  background-color: var(--secondary);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 0.75rem 0;
+}
+
+.dark .code-container {
+  background-color: var(--panel-background);
+}
+
+.code-container pre {
+  margin: 0;
+  padding: 0.75rem;
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+
+.copy-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: var(--background);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.copy-button:hover {
+  background-color: var(--secondary);
+}
+
+.dark .copy-button {
+  background-color: var(--secondary);
+}
+
+.dark .copy-button:hover {
+  background-color: var(--panel-hover);
+}
+
+.copy-button .copy-icon {
+  stroke: currentColor;
+  width: 14px;
+  height: 14px;
+}
+
 /* Footer */
 footer {
   text-align: center;
