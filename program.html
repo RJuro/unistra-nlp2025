@@ -166,6 +166,29 @@
         document.querySelectorAll('.day-section').forEach(section => {
             section.classList.remove('collapsed');
         });
+
+        // Copy to clipboard functionality
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            const text = element.textContent;
+            
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    const button = document.querySelector('.copy-button');
+                    const originalText = button.querySelector('span').textContent;
+                    
+                    button.querySelector('span').textContent = 'Copied!';
+                    button.classList.add('copied');
+                    
+                    setTimeout(() => {
+                        button.querySelector('span').textContent = originalText;
+                        button.classList.remove('copied');
+                    }, 2000);
+                })
+                .catch(err => {
+                    console.error('Could not copy text: ', err);
+                });
+        }
     </script>
 
     <style>
@@ -312,6 +335,56 @@
             position: absolute;
             left: 0;
             font-size: 1.2em;
+        }
+
+        /* Copy button styling */
+        .code-container {
+            position: relative;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            padding: 0.5rem;
+            margin: 1rem 0;
+            display: flex;
+        }
+
+        .dark .code-container {
+            background-color: #2d2d2d;
+        }
+
+        .code-container pre {
+            margin: 0;
+            padding: 0.5rem;
+            overflow-x: auto;
+            flex-grow: 1;
+        }
+
+        .copy-button {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background-color: var(--primary, #3b82f6);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 0.25rem 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .copy-button:hover {
+            background-color: var(--primary-dark, #2563eb);
+        }
+
+        .copy-button.copied {
+            background-color: var(--success, #10b981);
+        }
+
+        .copy-icon {
+            width: 16px;
+            height: 16px;
         }
 
         @media (max-width: 768px) {
